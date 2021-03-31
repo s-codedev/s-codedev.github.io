@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background-color: #1b262c;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.19);
+}
+
+.navbar-brand {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    color: #3282b8 !important;
+    font-weight: 600;
+    text-shadow: 1px 3px 6px 9px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+    margin-right: 10px;
+    color: #3282b8 !important;
+}
+
+.navbar-toggler {
+    background: #3282b8 !important;
+}
+
+section {
+    padding-top: 6em;
+}
+
+.jumbotron {
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 340px;
+}
+
+.font-16 {
+    font-size: 6em;
+}
+
+.header {
+    color: #3282b8;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-shadow: 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.title-section {
+    color: #3282b8;
+    font-size: 1.7em;
+    padding-bottom: 1.7em;
+    line-height: 0.1;
+}
+
+.title-section span {
+    display: inline-block;
+    position: relative;
+}
+
+.title-section span:before,
+.title-section span:after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    border-bottom: 2px solid #3282b8;
+    border-top: 2px solid #3282b8;
+    top: 0;
+    width: 100px;
+}
+
+.title-section span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.title-section span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.jumbotron p {
+    padding-top: 1.8em;
+    color: #bbe1fa;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+}
+
+.jumbotron p .bold {
+    font-weight: 700;
+}
+
+.features .card {}
+
+.features .card-text {
+    text-transform: capitalize;
+}
+
+.projects .card {}
+
+.skills .card {
+    height: 250px;
+}
+
+.skills .card .card-body img {
+    display: flex;
+    margin: auto;
+}
+
+.tombol {
+    background-color: #3282b8;
+    border-radius: 20px;
+    padding: 0.5em 2em;
+    color: white;
+    border: 0;
+}
+
+.footer {
+    background-color: #0f4c75;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.scroll {
+    background-color: #1b262c;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.19);
+}
+
+.container-parallax {
+    position: absolute;
+    bottom: 1;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.sosmed {
+    background-color: white;
+}
+
+
+/* DESKTOP VERSION */
+
+@media (min-width: 992px) {
+    .jumbotron {
+        background-image: url(../img/banner.png);
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 75em;
+        height: 640px;
+    }
+    .navbar-brand {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 32px;
+        color: #3282b8 !important;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .nav-link {
+        margin-right: 10px;
+        text-transform: uppercase;
+        color: #3282b8 !important;
+    }
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #3282b8;
+        width: 30px;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -7px;
+    }
+    .jumbotron .body-jumbotron {
+        margin-left: 8em;
+    }
+    .jumbotron p {
+        padding-top: 3em;
+        color: #bbe1fa;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+        font-size: 1.4rem;
+    }
+    .jumbotron p .bold {
+        font-weight: 700;
+    }
+    .header {
+        color: #3282b8;
+        font-size: 3.3rem;
+        font-weight: 700;
+        white-space: nowrap;
+        text-shadow: 1px 3px rgba(0, 0, 0, 0.1);
+        padding-bottom: 1em;
+    }
+    .title-section {
+        color: #3282b8;
+        font-size: 3em;
+        text-transform: uppercase;
+        padding-bottom: 1.7em;
+        line-height: 0.1;
+    }
+    .title-section span {
+        display: inline-block;
+        position: relative;
+    }
+    .title-section span:before,
+    .title-section span:after {
+        content: "";
+        position: absolute;
+        height: 10px;
+        border-bottom: 2px solid #3282b8;
+        border-top: 2px solid #3282b8;
+        top: 0;
+        width: 100px;
+    }
+    .title-section span:before {
+        right: 100%;
+        margin-right: 15px;
+    }
+    .title-section span:after {
+        left: 100%;
+        margin-left: 15px;
+    }
+    .font-16 {
+        font-size: 6em;
+        color: #3282b8;
+    }
+    .row-custom {
+        padding-bottom: 1em;
+    }
+    .features .card {
+        height: 350px;
+    }
+    .features .card-text {
+        text-transform: capitalize;
+    }
+    .projects .card {
+        height: 250px;
+    }
+    .skills .card {
+        height: 250px;
+    }
+    .skills .card .card-body img {
+        display: flex;
+        margin: auto;
+    }
+    .tombol {
+        background-color: #3282b8;
+        border-radius: 20px;
+        padding: 0.5em 2em;
+        color: white;
+        border: 0;
+    }
+    .footer {
+        background-color: #0f4c75;
+        color: white;
+    }
+    .footer a {
+        color: white;
+    }
+    nav {
+        background-color: #1b262c;
+        box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.19);
+    }
+    .container-parallax {
+        position: absolute;
+        bottom: 1;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .sosmed {
+        background-color: transparent;
+    }
+}
