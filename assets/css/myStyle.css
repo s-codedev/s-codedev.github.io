@@ -105,12 +105,14 @@ section {
 .projects .card {}
 
 .skills .card {
-    height: 250px;
+    height: auto;
+    padding-bottom: 1.3em;
 }
 
 .skills .card .card-body img {
     display: flex;
     margin: auto;
+    max-height: 90.25px;
 }
 
 .tombol {
@@ -245,11 +247,13 @@ section {
         height: 250px;
     }
     .skills .card {
-        height: 250px;
+        height: auto;
+        padding-bottom: 1.3em;
     }
     .skills .card .card-body img {
         display: flex;
         margin: auto;
+        max-height: 90.25px;
     }
     .tombol {
         background-color: #3282b8;
