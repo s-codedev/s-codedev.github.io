@@ -9,6 +9,20 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwaffBsPgd0becl4D8TkH
 const form = document.forms['contactForm']
 const btnKirim = document.querySelector('.btnKirim');
 const btnLoading = document.querySelector('.btnLoading');
+const navBar = document.querySelector('nav');
+const navLinks = document.querySelectorAll('.nav-link');
+
+
+window.addEventListener('scroll', function() {
+    navBar.classList.toggle('scroll', window.scrollY > 10)
+})
+
+navLinks.forEach(navLink => {
+    navLink.addEventListener('click', function() {
+        navLinks.forEach(navLink => navLink.classList.remove('active'))
+        this.classList.add('active')
+    })
+})
 
 form.addEventListener('submit', e => {
     e.preventDefault()

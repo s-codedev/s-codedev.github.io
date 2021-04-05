@@ -9,8 +9,7 @@ body {
 }
 
 nav {
-    background-color: #1b262c;
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.19);
+    background-color: transparent !important;
 }
 
 .navbar-brand {
@@ -22,12 +21,23 @@ nav {
 }
 
 .nav-link {
-    margin-right: 10px;
     color: #3282b8 !important;
 }
 
 .navbar-toggler {
     background: #3282b8 !important;
+}
+
+nav .navbar-collapse .navbar-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.scroll .navbar-collapse .navbar-nav {
+    background-color: #1b262c !important;
+}
+
+nav .navbar-collapse .navbar-nav .nav-link {
+    text-align: center;
 }
 
 section {
@@ -96,8 +106,6 @@ section {
     font-weight: 700;
 }
 
-.features .card {}
-
 .features .card-text {
     text-transform: capitalize;
 }
@@ -131,8 +139,8 @@ section {
 }
 
 .scroll {
-    background-color: #1b262c;
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.19);
+    background-color: #1b262c !important;
+    box-shadow: 0 10px 40px 10px rgba(0, 0, 0, 0.19);
 }
 
 .container-parallax {
@@ -145,6 +153,8 @@ section {
 
 .sosmed a {
     color: #333;
+    padding-right: 1em;
+    text-shadow: 1px 3px rgba(0, 0, 0, 1);
 }
 
 
@@ -170,6 +180,10 @@ section {
         text-transform: uppercase;
         color: #3282b8 !important;
     }
+    .nav-link:hover::before {
+        visibility: hidden;
+        transform: scaleX(0);
+    }
     .nav-link:hover::after {
         content: '';
         display: block;
@@ -178,6 +192,32 @@ section {
         margin: auto;
         padding-bottom: 5px;
         margin-bottom: -7px;
+        visibility: visible;
+        transform: scaleX(1);
+        transition: all 3s ease-in-out;
+    }
+    nav .active::before {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #3282b8;
+        width: 30px;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -7px;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all .3s ease-in-out;
+    }
+    nav .active::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #3282b8;
+        width: 30px;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -7px;
+        visibility: visible;
+        transform: scaleX(1);
     }
     .jumbotron .body-jumbotron {
         margin-left: 8em;
@@ -260,16 +300,16 @@ section {
         color: white;
         border: 0;
     }
+    .scroll {
+        background-color: #1b262c !important;
+        box-shadow: 0 10px 40px 10px rgba(0, 0, 0, 0.19);
+    }
     .footer {
         background-color: #0f4c75;
         color: white;
     }
     .footer a {
         color: white;
-    }
-    nav {
-        background-color: #1b262c;
-        box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.19);
     }
     .container-parallax {
         position: absolute;
@@ -278,7 +318,8 @@ section {
         height: 100%;
         z-index: -1;
     }
-    .sosmed {
-        background-color: transparent;
+    .sosmed a {
+        color: #3282b8;
+        padding-right: 1em;
     }
 }
